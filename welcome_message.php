@@ -17,6 +17,25 @@
 				Pokemon Aleatorio
 			</a>
 		</button>
+		<?php if (isset($pokemon['id'])) {
+
+			$anterior= $pokemon['id'] -1;
+			$proximo = $pokemon['id'] +1;
+		?>
+			<button type="button">
+				<a href="<?= base_url("?id=$anterior")?>">
+					Anterior
+				</a>
+			</button>
+
+			<button type="button">
+				<a href="<?= base_url("?id=$proximo")?>">
+					Proximo
+				</a>
+			</button>
+		
+	<?php	}?>
+		
 	</form>
 
 	<div>
